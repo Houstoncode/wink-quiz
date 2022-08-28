@@ -1,0 +1,17 @@
+{
+  "name": "my-beatifuel-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && yarn start:dev",
+    "backend": "cd backend && yarn start:dev",
+    "start": "concurrently \"yarn frontend\" \"yarn backend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
