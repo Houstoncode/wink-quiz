@@ -27,6 +27,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended', // Make sure this is always the last element in the array.
   ],
@@ -40,6 +41,7 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     'react/display-name': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
