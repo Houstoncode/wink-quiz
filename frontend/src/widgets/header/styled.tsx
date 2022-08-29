@@ -21,7 +21,9 @@ export const LeftSide = styled.div`
   align-items: center;
 `;
 
-export const RightSide = styled(LeftSide)``;
+export const RightSide = styled(LeftSide)`
+  justify-content: flex-end;
+`;
 
 export const Navbar = styled.nav`
   display: flex;

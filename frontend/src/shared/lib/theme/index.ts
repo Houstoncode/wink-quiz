@@ -6,17 +6,10 @@ export * from './fonts';
 export * from './global';
 export * from './normalize';
 
-export interface ITheme {
-  colors: {
-    primary: string;
-    secondary: string;
-    success: string;
-    danger: string;
+type Colors = 'primary' | 'secondary' | 'success' | 'danger' | 'white' | 'purple';
 
-    white: string;
-    bg: string;
-    font: string;
-  };
+export interface ITheme {
+  colors: Record<Colors, string>;
 
   media: {
     extraLarge: string;
@@ -30,22 +23,6 @@ export interface ITheme {
     colors: Record<TypographyVariant, string>;
     weights: Record<TypographyVariant, CSSObject['fontWeight']>;
   };
-
-  sizes: {
-    header: { height: number };
-    container: { width: number };
-    footer: { height: number };
-    modal: { width: number };
-  };
-
-  durations: {
-    ms300: number;
-  };
-
-  order: {
-    header: number;
-    modal: number;
-  };
 }
 
 export const baseTheme: ITheme = {
@@ -53,11 +30,9 @@ export const baseTheme: ITheme = {
     primary: '#7986cb',
     secondary: '#2b2b2b',
     success: '#4caf50',
-    danger: '#f44336 ',
-
+    danger: '#F52F57',
     white: '#ffffff',
-    bg: '#E5E4E8',
-    font: '#19191B',
+    purple: '#6F31BE',
   },
 
   media: {
@@ -92,24 +67,5 @@ export const baseTheme: ITheme = {
       body: '#fff',
       link: '#fff',
     },
-  },
-
-  // in px
-  sizes: {
-    header: { height: 56 },
-    container: { width: 1200 },
-    footer: { height: 128 },
-    modal: { width: 540 },
-  },
-
-  // in ms
-  durations: {
-    ms300: 300,
-  },
-
-  // z-index
-  order: {
-    header: 50,
-    modal: 100,
   },
 };
